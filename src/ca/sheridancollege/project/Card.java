@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Project Base code.
  * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
+ * @author Viktoriya Pak 
  */
 package ca.sheridancollege.project;
 
@@ -13,13 +13,27 @@ package ca.sheridancollege.project;
  */
 public abstract class Card {
     //default modifier for child classes
-
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    @Override
-    public abstract String toString();
-
+    public enum Suit{
+    HEARTS, CLUBS, SPADES, DIAMONDS
+    }
+    public enum Value{
+        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+    }
+    public Value value;
+    public Suit suit;
+    public Value getValue(){
+        return this.value;
+    }
+    public void setValue(Value value){
+        this.value=value;
+    }
+    public Suit getSuit(){
+        return this.suit;
+    }
+    public void setSuit(Suit suit){
+        this.suit=suit;
+    }
+//     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+//     */
 }
+ 
